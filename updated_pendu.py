@@ -16,15 +16,15 @@ lettre = ""
 
 # fonction qui demande une lettre
 def demande_lettre():
-    lettre = "erreur"
-    while lettre == "erreur":
+    erreur = True
+    lettre = ""
+    while erreur == True:
         lettre_temp = str(input("Devinez une lettre : "))
-        lettre_temp = lettre.lower()
-        if lettre_temp in liste_lettre and len(lettre_temp)>1:
+        lettre_temp = lettre_temp.lower()
+        if lettre_temp in liste_lettre and len(lettre_temp)<=1:
             lettre = lettre_temp
-            break
+            erreur = False
         else: 
-            lettre = "erreur"
             print("Veuillez saisir un seul caractère valide")
     return lettre
 
@@ -63,4 +63,3 @@ while nb_coups < 8:
 
 # afficher le mot complet
 print("Le mot était :", mot_secret)
-
