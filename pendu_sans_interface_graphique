@@ -31,7 +31,7 @@ def demande_lettre():
 while nb_coups < 8:
 
     # renvoyer les lettres fausses
-    print(lettres_ratees)
+    print("Lettres fausses : " + str(lettres_ratees))
 
     # afficher le mot partiellement complété
     mot_affiche = ""
@@ -64,4 +64,3 @@ while nb_coups < 8:
 
 # afficher le mot complet
 print("Le mot était :", mot_secret)
-
